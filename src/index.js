@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 
 // Bootstrap import 
-import '../node_modules/bootstrap/scss/bootstrap.scss'
+import '../node_modules/bootstrap/scss/bootstrap.scss';
 import './css/main.scss';
 
 ReactDOM.render(<App />, document.getElementById('root'));
