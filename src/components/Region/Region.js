@@ -47,12 +47,16 @@ class Region extends React.Component {
 					}
 				</div>
 				<div className="col-md-12 aligner">
-					<button 
-						className="btn btn-success" 
-						onClick={this.handleShowRegions}
-					>
-						Show More
-					</button>
+					{
+						regions.length === slicedRegions.length ?
+							null :
+							<button 
+								className="btn btn-success" 
+								onClick={this.handleShowRegions}
+							>
+								Show More
+							</button>
+					}
 				</div>
 			</div>
 		);
