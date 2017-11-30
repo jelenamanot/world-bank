@@ -1,42 +1,21 @@
 import React from 'react';
 
-import countryService  from '../services/countryService';
-import regionService  from '../services/regionService';
+import Nav from './Nav/Nav';
+import Region from './Region/Region';
+import Country from './Country/Country';
 
-class App extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			regions: [],
-			countries: []
-		};
-	}
+import { Route, Switch } from 'react-router-dom';
 
-	componentWillMount() {
-		regionService.getAllData()
-			.then(response => {
-				this.setState({ regions: response.data[1] });
-			})
-			.catch(error => {
-				console.log(error);
-			});
-		countryService.getAllData()
-			.then(response => {
-				this.setState({ countries: response.data[1] });
-			})
-			.catch(error => {
-				console.log(error);
-			});
-	}
-
-	render() {
-		return(
-			<div>
-				<p>World Bank Init Project</p>
-				<button type="button" className="btn btn-primary">Primary</button>
-			</div>
-		);
-	}
-}
+const App = () => {
+	return(
+		<div className="app container">
+			<Nav />
+			<Switch>
+				<Route path="/region" component={Region}/>
+				<Route path="/country" component={Country}/>
+			</Switch>
+		</div>
+	);
+};
 
 export default App;

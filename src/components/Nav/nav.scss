@@ -1,0 +1,24 @@
+@import '../../css/colors';
+
+nav {
+	margin-top: 2%;
+	h3 { 
+		float: left; 
+		.bank-span {
+			color: $secondary-color;
+		}
+	}
+	ul { 
+		float: right;
+		li a {
+			color: #ffffff;
+			border: 2px solid transparent;
+			padding: 2px;
+			transition: border 0.3s ease-in;
+		}
+		li a:hover {
+			border: 2px solid $secondary-color;
+			color: #ffffff;
+		}
+	}
+}
