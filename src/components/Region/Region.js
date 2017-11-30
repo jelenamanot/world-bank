@@ -2,6 +2,8 @@ import React from 'react';
 
 import regionService from '../../services/regionService';
 
+import SingleRegion from './SingleRegion';
+
 class Region extends React.Component {
 	constructor() {
 		super();
@@ -21,10 +23,15 @@ class Region extends React.Component {
 	}
 
 	render() {
-		console.log(this.state.regions);
+		const { regions } = this.state;
 		return(
-			<div>
-				<p>Region</p>
+			<div className="row col-md-12">
+				{
+					regions.map(region => <SingleRegion 
+						key={region.id + Math.random()}
+						name={region.name}
+					/>)
+				}
 			</div>
 		);
 	}
