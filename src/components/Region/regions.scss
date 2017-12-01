@@ -1,0 +1,21 @@
+@import '../../css/colors';
+
+.regions {
+	button {
+		margin: 50px 0;
+	}
+}
+
+.single-region {
+	padding: 20px;
+	color: $main-color;
+	.wrap-region {
+		background-color: #ffffff;
+		padding-top: 10px;
+		border: 1px solid $secondary-color;
+		height: 150px;
+		p {
+			color: $secondary-color;
+		}
+	}
+}
