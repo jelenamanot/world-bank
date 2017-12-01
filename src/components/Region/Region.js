@@ -51,8 +51,8 @@ class Region extends React.Component {
 		});
 
 		return(
-			<div className="regions row col-md-12">
-				<div className="search-wrap col-md-12 aligner">
+			<div className="regions col-md-12">
+				<div className="search-wrap row aligner">
 					<Search 
 						placeholder="Search for regions" 
 						searchValue={searchValue}
