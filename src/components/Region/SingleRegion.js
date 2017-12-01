@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './regions.scss';
 
@@ -10,6 +11,10 @@ const SingleRegion = (props) => {
 			</div>
 		</div>
 	);
+};
+
+SingleRegion.propTypes = {
+	name: PropTypes.string.isRequired
 };
 
 export default SingleRegion;

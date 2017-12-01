@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 
 const Search = (props) => {
 	const { placeholder, searchValue, handleUpdateSearch } = props;
@@ -12,6 +12,12 @@ const Search = (props) => {
 			onChange={handleUpdateSearch}
 		/>
 	);
+};
+
+Search.propTypes = {
+	placeholder: PropTypes.string,
+	searchValue: PropTypes.string,
+	handleUpdateSearch: PropTypes.func
 };
 
 export default Search;
