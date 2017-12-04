@@ -17,6 +17,7 @@ class Region extends React.Component {
 		};
 		this.handleShowRegions = this.handleShowRegions.bind(this);
 		this.handleUpdateSearch = this.handleUpdateSearch.bind(this);
+		this.resetSearch = this.resetSearch.bind(this);
 	}
 
 	componentWillMount() {
@@ -43,6 +44,12 @@ class Region extends React.Component {
 		});
 	}
 
+	resetSearch() {
+		this.setState({
+			searchValue: ''
+		});
+	}
+
 	render() {
 		const { regions, showRegions, searchValue } = this.state;
 
@@ -57,6 +64,7 @@ class Region extends React.Component {
 						placeholder="Search for regions" 
 						searchValue={searchValue}
 						handleUpdateSearch={this.handleUpdateSearch}
+						resetSearch={this.resetSearch}
 					/>
 				</div>
 				<div className="row">

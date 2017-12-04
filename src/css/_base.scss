@@ -11,7 +11,16 @@ body {
 		justify-content: center;
 	}
 	.search-wrap {
-		padding: 0 30%;
 		margin: 20px 0;
+	}
+	//buttons 
+	.reset-btn {
+		margin: 0;
+		background-color: transparent;
+		// padding: 5px;
+		border: none;
+		color: #ffffff;
+		cursor: pointer;
+		font-size: 23px;
 	}
 }
