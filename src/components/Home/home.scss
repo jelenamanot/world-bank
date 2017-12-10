@@ -1,0 +1,33 @@
+@import '../../css/colors';
+
+.home {
+	.home-heading {
+		padding: 80px 0;
+	}
+	.title-home {
+		font-weight: 300;
+		margin: 20px 0;
+	}
+	.icons {
+		padding: 50px 0;
+	}
+	.about {
+		padding: 30px 0;
+	}
+	.home-wrap {
+		text-align: center;
+		padding: 20px 50px;
+		.home-content {
+			border: 1px solid $light-color;
+			padding: 20px 50px;
+			h3 a {
+				color: $light-color;
+				text-decoration: none;
+				transform: color 0.3s ease;
+				&:hover {
+					color: $secondary-color;
+				}
+			}
+		}
+	}
+}

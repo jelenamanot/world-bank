@@ -1,6 +1,7 @@
 body {
 	background-color: $main-color;
-	color: #ffffff;
+	color: $light-color;
+	margin-bottom: 50px;
 	h3 {
 		font-weight: normal;
 	}
@@ -12,15 +13,31 @@ body {
 	}
 	.search-wrap {
 		margin: 20px 0;
+		input {
+			background-color: $light-color;
+		}
+		input:focus {
+			border-color: $secondary-color;
+			background-color: $light-color;
+			box-shadow: none;
+		}
 	}
 	//buttons 
 	.reset-btn {
 		margin: 0;
 		background-color: transparent;
-		// padding: 5px;
 		border: none;
-		color: #ffffff;
+		color: $light-color;
 		cursor: pointer;
 		font-size: 23px;
+		transition: color 0.3s ease;
 	}
+	.reset-btn:focus { outline: none; }
+	.reset-btn:hover { color: $secondary-color; }
+
+	// Reusable bank span
+	.bank-span {
+		color: $secondary-color;
+	}
+
 }
